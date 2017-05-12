@@ -2,7 +2,6 @@
   "name": "express-app-runner",
   "version": "0.0.1",
   "description": "A ridiculously fast way to configure and run an express app.",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
