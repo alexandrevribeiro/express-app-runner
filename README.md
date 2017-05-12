@@ -7,7 +7,7 @@ Installing
 
 Documentation
 ---
-[Documentation is available here](https://github.com/vribeiro-alexandre/express-app-runner/docs/documentation.md).
+[Documentation is available here](https://github.com/vribeiro-alexandre/express-app-runner/blob/master/docs/documentation.md).
 
 Sample
 ---
@@ -19,7 +19,7 @@ var indexFilePath = __dirname + '/index.html';
 var publicDirPath = __dirname + '/public';
 
 // Defines a index page to be provided by '/'
-runner.setIndexFile(indexFilePath);
+runner.setIndexPage(indexFilePath);
 
 // Making the content of 'public' folder available for the app
 runner.setStaticDir(publicDirPath);
