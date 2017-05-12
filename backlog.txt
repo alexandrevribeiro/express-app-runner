@@ -1,1 +1,3 @@
 - Make it work both with http and https (http://expressjs.com/pt-br/api.html -> app.listen(port, [hostname], [backlog], [callback]))
+- Implement the "addPage(relativeUrl, filePath)"
+- Finish docs
