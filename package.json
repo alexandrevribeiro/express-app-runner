@@ -1,0 +1,28 @@
+{
+  "name": "express-app-runner",
+  "version": "0.0.1",
+  "description": "A ridiculously fast way to configure and run an express app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vribeiro-alexandre/express-app-runner.git"
+  },
+  "keywords": [
+    "express",
+    "app"
+  ],
+  "author": "Alexandre Ribeiro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vribeiro-alexandre/express-app-runner/issues"
+  },
+  "homepage": "https://github.com/vribeiro-alexandre/express-app-runner#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "merge": "^1.2.0",
+    "open": "0.0.5"
+  }
+}
