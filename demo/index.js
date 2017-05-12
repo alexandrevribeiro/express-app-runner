@@ -7,7 +7,7 @@ var publicDirPath = path.join(__dirname, 'public');
 // Defines a index page to be provided by '/'
 runner.setIndexFile(indexFilePath);
 
-// Making the content of 'public' folder to the app
+// Making the content of 'public' folder available for the app
 runner.setStaticDir(publicDirPath);
 
 // Runs the app
