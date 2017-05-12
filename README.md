@@ -24,7 +24,7 @@ runner.setStaticDir(publicDirPath);
 runner.run();
 ```
 
-> 
+> The documentation will be finished soon.
 
 [npm-url]: https://npmjs.org/package/express-app-runner
 [npm-image]: http://img.shields.io/npm/v/express-app-runner.svg
