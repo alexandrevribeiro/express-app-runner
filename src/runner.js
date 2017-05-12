@@ -1,10 +1,6 @@
 var express = require('express');
 var open = require('open');
 var merge = require('merge');
-var http = require('http');
-
-http.createServer(app).listen()
-
 var app = express();
 
 var defaultRunOptions = {
