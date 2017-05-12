@@ -5,7 +5,11 @@ Installing
 ---
     npm install express-app-runner --save
 
-Using
+Documentation
+---
+[Documentation is available here](https://github.com/vribeiro-alexandre/express-app-runner/docs/documentation.md).
+
+Sample
 ---
 
 ```js
@@ -23,8 +27,6 @@ runner.setStaticDir(publicDirPath);
 // Runs the app
 runner.run();
 ```
-
-> The documentation will be finished soon.
 
 [npm-url]: https://npmjs.org/package/express-app-runner
 [npm-image]: http://img.shields.io/npm/v/express-app-runner.svg
