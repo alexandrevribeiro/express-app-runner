@@ -1,4 +1,4 @@
-var runner = require('../src/runner');
+var runner = require('../lib/runner');
 var path = require('path');
 
 var indexFilePath = path.join(__dirname, 'index.html');
