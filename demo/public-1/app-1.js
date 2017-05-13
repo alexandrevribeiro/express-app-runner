@@ -1,0 +1,1 @@
+console.log('"public-1/app.js" was loaded!')
