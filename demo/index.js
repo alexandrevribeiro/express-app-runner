@@ -20,7 +20,7 @@ runner.addStaticDir(publicDirPath2);
 
 // Adding any other endpoint
 runner.app.get('/anything', function(req, res) {
-    res.status(status).send('Anything!!!');
+    res.status(200).send('Anything!!!');
 });
 
 // Runs the app

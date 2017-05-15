@@ -1,1 +1,1 @@
-console.log('"public-2/app.js" was loaded!')
+console.log('"public-2/app.js" was loaded!'); // eslint-disable-line no-console
