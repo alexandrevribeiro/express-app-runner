@@ -1,4 +1,8 @@
-# express-app-runner [![NPM version][npm-image]][npm-url]
+# express-app-runner 
+[![NPM version][npm-image]][npm-url]
+[![Travis Build Status][travis-image]][travis-url]
+[![AppVeyor Build Status][appveyor-image]][appveyor-url]
+
 A ridiculously fast and easy way to configure and run an express app.
 
 Installing
@@ -67,4 +71,10 @@ runner.run({
 ```
 
 [npm-url]: https://npmjs.org/package/express-app-runner
-[npm-image]: http://img.shields.io/npm/v/express-app-runner.svg
+[npm-image]: https://badge.fury.io/js/express-app-runner.svg
+
+[travis-url]: https://travis-ci.org/alexandrevribeiro/express-app-runner
+[travis-image]: https://travis-ci.org/alexandrevribeiro/express-app-runner.svg?branch=master
+
+[appveyor-url]: https://ci.appveyor.com/project/alexandrevribeiro/express-app-runner
+[appveyor-image]: https://ci.appveyor.com/api/projects/status/github/alexandrevribeiro/express-app-runner?svg=true
