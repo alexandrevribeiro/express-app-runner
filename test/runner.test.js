@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 var expect = require('chai').expect;
 var axios = require('axios');
 var demoApp = require('../demo/demoApp');
@@ -12,13 +14,13 @@ demoApp({
     showListeningLog: false
 });
 
+// Testing the index page (/)
 describe('Demo app', function () {
     it('should provide an "index.html" at "' + appUrl + '"', function (done) {
 
         axios.get(appUrl)
             .then(function (response) {
-                var indexContent = response.data;
-                expect(indexContent).to.contains('<h1>Express app runner...</h1>');                
+                expect(response.data).to.contains('<h1>Express app runner...</h1>');                
 
                 // When you're doing an async test you need to call "done()" after your async code
                 // has completed, and your test has modified everything it needs to modify, so you 
@@ -26,7 +28,26 @@ describe('Demo app', function () {
                 done();
             })
             .catch(function (error) {
-                console.log(error);
+                console.error(error);
             });        
+    });
+});
+
+// Testing the index page (/)
+describe('Demo app', function () {
+    it('should provide a "users.html" at "' + appUrl + '/users"', function (done) {
+
+        axios.get(appUrl + '/users')
+            .then(function (response) {
+                expect(response.data).to.contains('<h1>Users...</h1>');                
+
+                // When you're doing an async test you need to call "done()" after your async code
+                // has completed, and your test has modified everything it needs to modify, so you 
+                // can check the results correctly.
+                done();
+            })
+            .catch(function (error) {
+                console.error(error);
+            });
     });
 });
