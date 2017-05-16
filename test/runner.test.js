@@ -59,10 +59,36 @@ describe('Demo app', function () {
         axios.get(appUrl + '/anything')
             .then(function (response) {
                 expect(response.data).to.equal('Anything!!!');                
+                done();
+            })
+            .catch(function (error) {
+                console.error(error);
+            });
+    });
+});
 
-                // When you're doing an async test you need to call "done()" after your async code
-                // has completed, and your test has modified everything it needs to modify, so you 
-                // can check the results correctly.
+// Testing if there is the 'app-2.js' file being statically provided by the app
+describe('Demo app', function () {
+    it('should provide a JavaScript file at "' + appUrl + '/app-1.js"', function (done) {
+
+        axios.get(appUrl + '/app-1.js')
+            .then(function (response) {
+                expect(response.data).to.contains('console.log(\'"public-1/app.js" was loaded!\');');
+                done();
+            })
+            .catch(function (error) {
+                console.error(error);
+            });
+    });
+});
+
+// Testing if there is the 'app-2.js' file being statically provided by the app
+describe('Demo app', function () {
+    it('should provide a JavaScript file at "' + appUrl + '/app-2.js"', function (done) {
+
+        axios.get(appUrl + '/app-2.js')
+            .then(function (response) {
+                expect(response.data).to.contains('console.log(\'"public-2/app.js" was loaded!\');');
                 done();
             })
             .catch(function (error) {
