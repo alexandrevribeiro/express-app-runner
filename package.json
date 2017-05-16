@@ -1,6 +1,6 @@
 {
   "name": "express-app-runner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A ridiculously fast and easy way to configure and run an express app.",
   "main": "./lib/runner.js",
   "scripts": {
