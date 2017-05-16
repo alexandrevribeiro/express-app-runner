@@ -1,4 +1,6 @@
 # express-app-runner 
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/alexandrevribeiro/express-app-runner.svg)](https://greenkeeper.io/)
 [![NPM version][npm-image]][npm-url]
 [![Travis Build Status][travis-image]][travis-url]
 [![AppVeyor Build Status][appveyor-image]][appveyor-url]
