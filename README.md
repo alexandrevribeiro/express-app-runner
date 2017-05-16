@@ -11,7 +11,7 @@ Installing
 
 Documentation
 ---
-[Documentation is available here](https://github.com/vribeiro-alexandre/express-app-runner/blob/master/docs/documentation.md).
+[Documentation is available here](https://github.com/alexandrevribeiro/express-app-runner/blob/master/docs/documentation.md).
 
 Samples
 ---

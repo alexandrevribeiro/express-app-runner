@@ -1,7 +1,7 @@
 {
   "name": "express-app-runner",
-  "version": "0.0.2",
-  "description": "A ridiculously fast  and easy way to configure and run an express app.",
+  "version": "1.0.0",
+  "description": "A ridiculously fast and easy way to configure and run an express app.",
   "main": "./lib/runner.js",
   "scripts": {
     "lint": "esw lib demo --color",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vribeiro-alexandre/express-app-runner.git"
+    "url": "git+https://github.com/alexandrevribeiro/express-app-runner.git"
   },
   "keywords": [
     "express",
@@ -18,9 +18,9 @@
   "author": "Alexandre Ribeiro <vribeiro.alexandre@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vribeiro-alexandre/express-app-runner/issues"
+    "url": "https://github.com/alexandrevribeiro/express-app-runner/issues"
   },
-  "homepage": "https://github.com/vribeiro-alexandre/express-app-runner#readme",
+  "homepage": "https://github.com/alexandrevribeiro/express-app-runner#readme",
   "dependencies": {
     "express": "^4.15.2",
     "merge": "^1.2.0",
