@@ -5,21 +5,21 @@ A ridiculously fast and easy way to configure and run an express app.
 
 
 * [express-app-runner](#module_express-app-runner)
-    * [app](#exp_module_express-app-runner--app) : <code>Express</code> ⏏
-    * [setIndexPage(filePath)](#exp_module_express-app-runner--setIndexPage) ⏏
-    * [addPage(urlPath, filePath)](#exp_module_express-app-runner--addPage) ⏏
-    * [addStaticDir(dirPath)](#exp_module_express-app-runner--addStaticDir) ⏏
-    * [run([options])](#exp_module_express-app-runner--run) ⇒ <code>http.Server</code> ⏏
+    * [app](#exp_module_express-app-runner--app) : <code>Express</code>
+    * [setIndexPage(filePath)](#exp_module_express-app-runner--setIndexPage)
+    * [addPage(urlPath, filePath)](#exp_module_express-app-runner--addPage)
+    * [addStaticDir(dirPath)](#exp_module_express-app-runner--addStaticDir)
+    * [run([options])](#exp_module_express-app-runner--run) ⇒ <code>http.Server</code>
 
 <a name="exp_module_express-app-runner--app"></a>
 
-### app : <code>Express</code> ⏏
+### app : <code>Express</code>
 The expression application.
 
 **Kind**: Exported member
 <a name="exp_module_express-app-runner--setIndexPage"></a>
 
-### setIndexPage(filePath) ⏏
+### setIndexPage(filePath)
 Defines an index page to be provided by '/'.
 
 **Kind**: Exported function
@@ -30,7 +30,7 @@ Defines an index page to be provided by '/'.
 
 <a name="exp_module_express-app-runner--addPage"></a>
 
-### addPage(urlPath, filePath) ⏏
+### addPage(urlPath, filePath)
 Adds a page to be provided by the specified 'urlPath'.
 
 **Kind**: Exported function
@@ -42,7 +42,7 @@ Adds a page to be provided by the specified 'urlPath'.
 
 <a name="exp_module_express-app-runner--addStaticDir"></a>
 
-### addStaticDir(dirPath) ⏏
+### addStaticDir(dirPath)
 Makes the content of 'dirPath' directory available for the app.
 
 **Kind**: Exported function
@@ -53,7 +53,7 @@ Makes the content of 'dirPath' directory available for the app.
 
 <a name="exp_module_express-app-runner--run"></a>
 
-### run([options]) ⇒ <code>http.Server</code> ⏏
+### run([options]) ⇒ <code>http.Server</code>
 Runs the application.
 
 **Kind**: Exported function
