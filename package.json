@@ -4,8 +4,9 @@
   "description": "A ridiculously fast and easy way to configure and run an express app.",
   "main": "./lib/runner.js",
   "scripts": {
-    "lint": "esw lib demo --color",
-    "lint-watch": "npm run lint -- --watch"
+    "lint": "esw lib demo test --color",
+    "lint-watch": "npm run lint -- --watch",
+    "test": "mocha --reporter progress test"
   },
   "repository": {
     "type": "git",
@@ -27,8 +28,11 @@
     "open": "0.0.5"
   },
   "devDependencies": {
+    "axios": "^0.16.1",
+    "chai": "^3.5.0",
     "eslint": "^3.19.0",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-watch": "^3.1.0"
+    "eslint-watch": "^3.1.0",
+    "mocha": "^3.4.1"
   }
 }
