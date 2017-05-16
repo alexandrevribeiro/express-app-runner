@@ -27,9 +27,7 @@ describe('Demo app', function () {
                 // can check the results correctly.
                 done();
             })
-            .catch(function (error) {
-                console.error(error);
-            });        
+            .catch(done);        
     });
 });
 
@@ -46,9 +44,7 @@ describe('Demo app', function () {
                 // can check the results correctly.
                 done();
             })
-            .catch(function (error) {
-                console.error(error);
-            });
+            .catch(done);
     });
 });
 
@@ -61,9 +57,7 @@ describe('Demo app', function () {
                 expect(response.data).to.equal('Anything!!!');                
                 done();
             })
-            .catch(function (error) {
-                console.error(error);
-            });
+            .catch(done);
     });
 });
 
@@ -76,9 +70,7 @@ describe('Demo app', function () {
                 expect(response.data).to.contains('console.log(\'"public-1/app.js" was loaded!\');');
                 done();
             })
-            .catch(function (error) {
-                console.error(error);
-            });
+            .catch(done);
     });
 });
 
@@ -91,8 +83,6 @@ describe('Demo app', function () {
                 expect(response.data).to.contains('console.log(\'"public-2/app.js" was loaded!\');');
                 done();
             })
-            .catch(function (error) {
-                console.error(error);
-            });
+            .catch(done);
     });
 });
