@@ -7,12 +7,17 @@ var demoApp = require('../demo/demoApp');
 var appPort = 3123;
 var appUrl = 'http://localhost:' + appPort;
 
-// Runs the demo app
-demoApp({
-    port: appPort,
-    open: false,
-    showListeningLog: false
+before(function(done) {
+    // Runs the demo app
+    demoApp({
+        port: appPort,
+        open: false,
+        showListeningLog: false,
+        listeningCallback: function()  { done(); }
+    });
 });
+
+
 
 // Testing the index page (/)
 describe('Demo app', function () {
