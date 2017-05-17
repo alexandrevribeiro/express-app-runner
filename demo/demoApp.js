@@ -3,24 +3,19 @@ module.exports = function (options, callback) {
     var runner = require('../lib/runner');
     var path = require('path');
 
-    var indexFilePath = path.join(__dirname, 'index.html');
-    var usersFilePath = path.join(__dirname, 'users.html');
-    var publicDirPath1 = path.join(__dirname, 'public-1');
-    var publicDirPath2 = path.join(__dirname, 'public-2');
-
     // Defines a index page to be provided by '/'
-    runner.routeHomepageToFile(indexFilePath);
+    runner.routeHomepageToFile('./index.html');
 
-    // Adds "users" page to be provided by '/users'
-    runner.routeToFile('/users', usersFilePath);
+    // Routes the "/users" to the "users.html"
+    runner.routeToFile('/users', './users.html');
 
     // Making the content of 'public-1' folder available for the app
-    runner.addStaticDir(publicDirPath1);
+    runner.addStaticDir('./public-1');
 
     // Making the content of 'public-2' folder available for the app
-    runner.addStaticDir(publicDirPath2);
+    runner.addStaticDir('./public-2');
 
-    // Adding any other endpoint
+    // Routing any other endpoint
     runner.app.get('/anything', function (req, res) {
         res.status(200).send('Anything!!!');
     });
