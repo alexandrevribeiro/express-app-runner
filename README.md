@@ -70,7 +70,7 @@ runner.run({
 [npm-image]: https://badge.fury.io/js/express-app-runner.svg
 
 [travis-url]: https://travis-ci.org/alexandrevribeiro/express-app-runner
-[travis-image]: https://travis-ci.org/alexandrevribeiro/express-app-runner.svg?branch=master
+[travis-image]: https://img.shields.io/travis/alexandrevribeiro/express-app-runner.svg?label=unix
 
 [appveyor-url]: https://ci.appveyor.com/project/alexandrevribeiro/express-app-runner
-[appveyor-image]: https://ci.appveyor.com/api/projects/status/github/alexandrevribeiro/express-app-runner?svg=true
+[appveyor-image]: https://img.shields.io/appveyor/ci/alexandrevribeiro/express-app-runner.svg?label=windows
