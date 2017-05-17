@@ -20,16 +20,12 @@ Samples
 Running a simple app with an `index.html` as the root page and making the content of the `public` directory available to the app:
 ```js
 var runner = require('express-app-runner');
-var path = require('path');
-
-var indexFilePath = path.join(__dirname, 'index.html');
-var publicDirPath = path.join(__dirname, '/public';
 
 // Defines an index page to be provided by '/'
-runner.setIndexPage(indexFilePath);
+runner.routeHomepageToFile('./index.html');
 
 // Making the content of the 'public' folder available for the app
-runner.addStaticDir(publicDirPath);
+runner.addStaticDir('./public');
 
 // Runs the app
 runner.run();
@@ -38,27 +34,24 @@ runner.run();
 A more complex sample:
 ```js
 var runner = require('express-app-runner');
-var path = require('path');
-
-var indexFilePath = path.join(__dirname, 'index.html');
-var usersFilePath = path.join(__dirname, 'users.html');
-var publicDirPath1 = path.join(__dirname, 'public-1');
-var publicDirPath2 = path.join(__dirname, 'public-2');
 
 // Defines an index page to be provided by '/'
-runner.setIndexPage(indexFilePath);
+runner.routeHomepageToFile('./index.html');
 
-// Adds "users" page to be provided by '/users'
-runner.addPage('/users', usersFilePath);
+// Routes the "/users" to the "users.html"
+runner.routeToFile('/users', './users.html');
 
-// Making the content of 'public-1' folder available for the app
-runner.addStaticDir(publicDirPath1);
+// Routes the "/another" to the "another.html"
+runner.routeToFile('/another', './../anyOtherDir/another.html');
 
-// Making the content of 'public-2' folder available for the app
-runner.addStaticDir(publicDirPath2);
+// Making the content of 'public-1' folder available for the app (useful for JS and CSS)
+runner.addStaticDir('./public-1');
 
-// Adding any other endpoint
-runner.app.get('/anything', function(req, res) {
+// Making the content of 'public-2' folder available for the app (useful for JS and CSS)
+runner.addStaticDir('./public-2');
+
+// Routing any other endpoint
+runner.app.get('/anything', function (req, res) {
     res.status(200).send('Anything!!!');
 });
 
@@ -68,7 +61,8 @@ runner.run({
     hostname: 'my_hostname',
     open: false,
     showListeningLog: false,
-    listeningCallback: function() { doSomething(); }
+}, function(err) {
+    doSomething();
 });
 ```
 

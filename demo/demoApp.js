@@ -1,9 +1,8 @@
 module.exports = function (options, callback) {
 
     var runner = require('../lib/runner');
-    var path = require('path');
 
-    // Defines a index page to be provided by '/'
+    // Defines an index page to be provided by '/'
     runner.routeHomepageToFile('./index.html');
 
     // Routes the "/users" to the "users.html"
