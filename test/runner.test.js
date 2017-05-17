@@ -8,12 +8,13 @@ var appPort = 3123;
 var appUrl = 'http://localhost:' + appPort;
 
 // Runs the demo app
-before(function(done) {    
+before(function (done) {
     demoApp({
         port: appPort,
         open: false,
-        showListeningLog: false,
-        listeningCallback: function()  { done(); }
+        showListeningLog: false
+    }, function () {
+        done();
     });
 });
 
@@ -23,7 +24,7 @@ describe('Demo app', function () {
     it('should provide an "index.html" at "' + appUrl + '"', function (done) {
 
         request(appUrl, function (error, response, body) {
-            expect(body).to.contains('<h1>Express app runner...</h1>');                
+            expect(body).to.contains('<h1>Express app runner...</h1>');
             done();
         });
     });
@@ -34,7 +35,7 @@ describe('Demo app', function () {
     it('should provide a "users.html" at "' + appUrl + '/users"', function (done) {
 
         request(appUrl + '/users', function (error, response, body) {
-            expect(body).to.contains('<h1>Users...</h1>');                
+            expect(body).to.contains('<h1>Users...</h1>');
             done();
         });
     });
@@ -45,7 +46,7 @@ describe('Demo app', function () {
     it('should provide the text "Anything!!!" at "' + appUrl + '/anything"', function (done) {
 
         request(appUrl + '/anything', function (error, response, body) {
-            expect(body).to.contains('Anything!!!');                
+            expect(body).to.contains('Anything!!!');
             done();
         });
     });
@@ -56,7 +57,7 @@ describe('Demo app', function () {
     it('should provide a JavaScript file at "' + appUrl + '/app-1.js"', function (done) {
 
         request(appUrl + '/app-1.js', function (error, response, body) {
-            expect(body).to.contains('console.log(\'"public-1/app.js" was loaded!\');');                
+            expect(body).to.contains('console.log(\'"public-1/app.js" was loaded!\');');
             done();
         });
     });
@@ -67,7 +68,7 @@ describe('Demo app', function () {
     it('should provide a JavaScript file at "' + appUrl + '/app-2.js"', function (done) {
 
         request(appUrl + '/app-2.js', function (error, response, body) {
-            'console.log(\'"public-2/app.js" was loaded!\');'
+            expect(body).to.contains('console.log(\'"public-2/app.js" was loaded!\');');
             done();
         });
     });

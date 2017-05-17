@@ -1,4 +1,4 @@
-module.exports = function (options) {
+module.exports = function (options, callback) {
 
     var runner = require('../lib/runner');
     var path = require('path');
@@ -9,10 +9,10 @@ module.exports = function (options) {
     var publicDirPath2 = path.join(__dirname, 'public-2');
 
     // Defines a index page to be provided by '/'
-    runner.setIndexPage(indexFilePath);
+    runner.routeHomepageToFile(indexFilePath);
 
     // Adds "users" page to be provided by '/users'
-    runner.addPage('/users', usersFilePath);
+    runner.routeToFile('/users', usersFilePath);
 
     // Making the content of 'public-1' folder available for the app
     runner.addStaticDir(publicDirPath1);
@@ -26,5 +26,5 @@ module.exports = function (options) {
     });
 
     // Runs the app
-    runner.run(options);
+    runner.run(options, callback);
 };
