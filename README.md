@@ -17,7 +17,7 @@ Documentation
 
 Samples
 ---
-Running a simple app with an `index.html` as the root page and making the content of the `public` directory available to the app:
+Running a simple app with an `index.html` as the homepage and making the content of the `public` directory available to the app:
 ```js
 var runner = require('express-app-runner');
 
