@@ -1,0 +1,7 @@
+node_modules
+demo
+test
+.eslintrc.json
+.travis.yml
+appveyor.yml
+*.txt
