@@ -6,10 +6,10 @@ A ridiculously fast and easy way to configure and run an express app.
 
 * [express-app-runner](#module_express-app-runner)
     * [app](#exp_module_express-app-runner--app) : <code>Express</code>
-    * [setIndexPage(filePath)](#exp_module_express-app-runner--setIndexPage)
-    * [addPage(urlPath, filePath)](#exp_module_express-app-runner--addPage)
+    * [routeHomepageToFile(filePath)](#exp_module_express-app-runner--routeHomepageToFile)
+    * [routeToFile(urlPath, filePath)](#exp_module_express-app-runner--routeToFile)
     * [addStaticDir(dirPath)](#exp_module_express-app-runner--addStaticDir)
-    * [run([options])](#exp_module_express-app-runner--run) ⇒ <code>http.Server</code>
+    * [run([options], [callback])](#exp_module_express-app-runner--run) ⇒ <code>http.Server</code>
 
 <a name="exp_module_express-app-runner--app"></a>
 
@@ -17,28 +17,28 @@ A ridiculously fast and easy way to configure and run an express app.
 The expression application.
 
 **Kind**: Exported member
-<a name="exp_module_express-app-runner--setIndexPage"></a>
+<a name="exp_module_express-app-runner--routeHomepageToFile"></a>
 
-### setIndexPage(filePath)
-Defines an index page to be provided by '/'.
-
-**Kind**: Exported function
-
-| Param | Type | Description |
-| --- | --- | --- |
-| filePath | <code>string</code> | Path to the HTML file to be provided by '/'. |
-
-<a name="exp_module_express-app-runner--addPage"></a>
-
-### addPage(urlPath, filePath)
-Adds a page to be provided by the specified 'urlPath'.
+### routeHomepageToFile(filePath)
+Routes HTTP GET requests to the '/', providing the specified "filePath" by it.
 
 **Kind**: Exported function
 
 | Param | Type | Description |
 | --- | --- | --- |
-| urlPath | <code>string</code> | Path where the page will be provided. |
-| filePath | <code>string</code> | Path to the HTML file to be provided. |
+| filePath | <code>string</code> | The relative path to the HTML file to be provided by '/'. |
+
+<a name="exp_module_express-app-runner--routeToFile"></a>
+
+### routeToFile(urlPath, filePath)
+Routes HTTP GET requests to the specified 'urlPath', providing the specified "filePath" by it.
+
+**Kind**: Exported function
+
+| Param | Type | Description |
+| --- | --- | --- |
+| urlPath | <code>string</code> | The path for which the file will be provided. |
+| filePath | <code>string</code> | The relative path to the HTML file to be provided. |
 
 <a name="exp_module_express-app-runner--addStaticDir"></a>
 
@@ -49,11 +49,11 @@ Makes the content of 'dirPath' directory available for the app.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| dirPath | <code>string</code> | Directory path. |
+| dirPath | <code>string</code> | The relative path to the directory. |
 
 <a name="exp_module_express-app-runner--run"></a>
 
-### run([options]) ⇒ <code>http.Server</code>
+### run([options], [callback]) ⇒ <code>http.Server</code>
 Runs the application.
 
 **Kind**: Exported function
@@ -61,6 +61,7 @@ Runs the application.
 | Param | Type | Description |
 | --- | --- | --- |
 | [options] | <code>Object</code> | Options to configure how the app should be run. |
+| [callback] | <code>Object</code> | Callback function to be called after it successfully started listening to the app. |
 
 **Properties**
 
@@ -70,4 +71,3 @@ Runs the application.
 | options.hostname | <code>string</code> | <code>&quot;localhost&quot;</code> | Application hostname. |
 | options.open | <code>string</code> | <code>true</code> | Defines whether or not the application should be open after running it. |
 | options.showListeningLog | <code>string</code> | <code>true</code> | Defines whether or not it's to show a log after it successfully started listening to the app. |
-| options.listeningCallback | <code>string</code> | <code>null</code> | Callback function to be called after it successfully started listening to the app. |
