@@ -24,7 +24,9 @@ var runner = require('express-app-runner');
 // Defines an index page to be provided by '/'
 runner.routeHomepageToFile('./index.html');
 
-// Making the content of the 'public' folder available for the app
+// Making the content of the 'public' directory available for the app.
+// It may be useful to make JS and CSS files available to the app, 
+// even though most of the time you'll be probably using a bundler like Webpack.
 runner.addStaticDir('./public');
 
 // Runs the app
@@ -44,11 +46,10 @@ runner.routeToFile('/users', './users.html');
 // Routes the "/another" to the "another.html"
 runner.routeToFile('/another', './../anyOtherDir/another.html');
 
-// Making the content of 'public-1' folder available for the app (useful for JS and CSS)
-runner.addStaticDir('./public-1');
-
-// Making the content of 'public-2' folder available for the app (useful for JS and CSS)
-runner.addStaticDir('./public-2');
+// Making the content of the 'public' directory available for the app.
+// It may be useful to make JS and CSS files available to the app, 
+// even though most of the time you'll be probably using a bundler like Webpack.
+runner.addStaticDir('./public');
 
 // Routing any other endpoint
 runner.app.get('/anything', function (req, res) {
