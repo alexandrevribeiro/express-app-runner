@@ -1,7 +1,8 @@
-node_modules
-src
 demo
+docs
+src
 test
+.babelrc
 .eslintrc.json
 .travis.yml
 appveyor.yml
