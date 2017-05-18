@@ -1,6 +1,6 @@
-module.exports = function (options, callback) {
+import * as runner from '../lib/runner';
 
-    var runner = require('../lib/runner');
+export default function (options, callback) {
 
     // Defines an index page to be provided by '/'
     runner.routeHomepageToFile('./index.html');
@@ -15,10 +15,10 @@ module.exports = function (options, callback) {
     runner.addStaticDir('./public-2');
 
     // Routing any other endpoint
-    runner.app.get('/anything', function (req, res) {
+    runner.app.get('/anything', (req, res) => {
         res.status(200).send('Anything!!!');
     });
 
     // Runs the app
     runner.run(options, callback);
-};
+}
