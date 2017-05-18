@@ -1,2 +1,3 @@
-var demoApp = require('./demoApp');
+import demoApp from './demoApp';
+
 demoApp();

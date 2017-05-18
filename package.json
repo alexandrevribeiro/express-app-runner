@@ -7,8 +7,10 @@
     "lint": "esw src demo test --color",
     "lint-watch": "npm run lint -- --watch",
     "build": "babel src -d lib",
-    "demo": "node demo/index.js",
-    "test": "mocha --reporter progress test"
+    "predemo": "npm run build",
+    "demo": "babel-node demo/index.js",
+    "pretest": "npm run build",
+    "test": "mocha --compilers js:babel-core/register --reporter progress test"
   },
   "repository": {
     "type": "git",

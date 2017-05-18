@@ -1,29 +1,29 @@
 /* eslint-disable no-console */
 
-var expect = require('chai').expect;
-var request = require('request');
-var demoApp = require('../demo/demoApp');
+import {expect} from 'chai';
+import request from 'request';
+import demoApp from '../demo/demoApp';
 
-var appPort = 3123;
-var appUrl = 'http://localhost:' + appPort;
+const appPort = 3123;
+const appUrl = 'http://localhost:' + appPort;
 
 // Runs the demo app
-before(function (done) {
+before((done) => {
     demoApp({
         port: appPort,
         open: false,
         showListeningLog: false
-    }, function () {
+    }, () => {
         done();
     });
 });
 
 
 // Testing the index page (/)
-describe('Demo app', function () {
-    it('should provide an "index.html" at "' + appUrl + '"', function (done) {
+describe('Demo app', () => {
+    it('should provide an "index.html" at "' + appUrl + '"', (done) => {
 
-        request(appUrl, function (error, response, body) {
+        request(appUrl, (error, response, body) => {
             expect(body).to.contains('<h1>Express app runner...</h1>');
             done();
         });
@@ -31,10 +31,10 @@ describe('Demo app', function () {
 });
 
 // Testing the users page (/users)
-describe('Demo app', function () {
-    it('should provide a "users.html" at "' + appUrl + '/users"', function (done) {
+describe('Demo app', () => {
+    it('should provide a "users.html" at "' + appUrl + '/users"', (done) => {
 
-        request(appUrl + '/users', function (error, response, body) {
+        request(appUrl + '/users', (error, response, body) => {
             expect(body).to.contains('<h1>Users...</h1>');
             done();
         });
@@ -42,10 +42,10 @@ describe('Demo app', function () {
 });
 
 // Testing the "/anything" page
-describe('Demo app', function () {
-    it('should provide the text "Anything!!!" at "' + appUrl + '/anything"', function (done) {
+describe('Demo app', () => {
+    it('should provide the text "Anything!!!" at "' + appUrl + '/anything"', (done) => {
 
-        request(appUrl + '/anything', function (error, response, body) {
+        request(appUrl + '/anything', (error, response, body) => {
             expect(body).to.contains('Anything!!!');
             done();
         });
@@ -53,10 +53,10 @@ describe('Demo app', function () {
 });
 
 // Testing if there is the 'app-2.js' file being statically provided by the app
-describe('Demo app', function () {
-    it('should provide a JavaScript file at "' + appUrl + '/app-1.js"', function (done) {
+describe('Demo app', () => {
+    it('should provide a JavaScript file at "' + appUrl + '/app-1.js"', (done) => {
 
-        request(appUrl + '/app-1.js', function (error, response, body) {
+        request(appUrl + '/app-1.js', (error, response, body) => {
             expect(body).to.contains('console.log(\'"public-1/app.js" was loaded!\');');
             done();
         });
@@ -64,10 +64,10 @@ describe('Demo app', function () {
 });
 
 // Testing if there is the 'app-2.js' file being statically provided by the app
-describe('Demo app', function () {
-    it('should provide a JavaScript file at "' + appUrl + '/app-2.js"', function (done) {
+describe('Demo app', () => {
+    it('should provide a JavaScript file at "' + appUrl + '/app-2.js"', (done) => {
 
-        request(appUrl + '/app-2.js', function (error, response, body) {
+        request(appUrl + '/app-2.js', (error, response, body) => {
             expect(body).to.contains('console.log(\'"public-2/app.js" was loaded!\');');
             done();
         });

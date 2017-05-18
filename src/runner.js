@@ -38,7 +38,7 @@ const getAbsolutePath = (relativePath) => {
  * @alias module:express-app-runner
  */
 export function routeHomepageToFile(filePath) {
-    this.routeToFile('/', filePath);
+    routeToFile('/', filePath);
 }
 
 /**
