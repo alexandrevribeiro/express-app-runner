@@ -26,7 +26,7 @@ runner.routeHomepageToFile('./index.html');
 
 // Making the content of the 'public' directory available for the app.
 // It may be useful to make JS and CSS files available to the app, 
-// even though most of the time you'll be probably using a bundler like Webpack.
+// although most of the time you will probably be using a bundler like Webpack.
 runner.addStaticDir('./public');
 
 // Runs the app
@@ -48,7 +48,7 @@ runner.routeToFile('/another', './../anyOtherDir/another.html');
 
 // Making the content of the 'public' directory available for the app.
 // It may be useful to make JS and CSS files available to the app, 
-// even though most of the time you'll be probably using a bundler like Webpack.
+// although most of the time you will probably be using a bundler like Webpack.
 runner.addStaticDir('./public');
 
 // Routing any other endpoint
