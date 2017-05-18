@@ -4,8 +4,10 @@
   "description": "A ridiculously fast and easy way to configure and run an express app.",
   "main": "./lib/runner.js",
   "scripts": {
-    "lint": "esw lib demo test --color",
+    "lint": "esw src demo test --color",
     "lint-watch": "npm run lint -- --watch",
+    "build": "babel src -d lib",
+    "demo": "node demo/index.js",
     "test": "mocha --reporter progress test"
   },
   "repository": {
@@ -28,6 +30,8 @@
     "open": "0.0.5"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
     "chai": "^3.5.0",
     "eslint": "^3.19.0",
     "eslint-plugin-import": "^2.2.0",
