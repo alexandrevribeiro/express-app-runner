@@ -64,7 +64,7 @@ export function routeToFile(urlPath, filePath) {
  * Makes the content of 'dirPath' directory available for the app.
  * 
  * @param {string} dirPath The relative path to the directory.
- * @param {string} [virtualPath='/'] A virtual path in which the content of the 'dirPath' will be provided.
+ * @param {string} [virtualPath=/] A virtual path in which the content of the 'dirPath' will be provided.
  * @function
  * @alias module:express-app-runner
  */

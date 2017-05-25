@@ -8,7 +8,7 @@ A ridiculously fast and easy way to configure and run an express app.
     * [app](#exp_module_express-app-runner--app) : <code>Express</code>
     * [routeHomepageToFile(filePath)](#exp_module_express-app-runner--routeHomepageToFile)
     * [routeToFile(urlPath, filePath)](#exp_module_express-app-runner--routeToFile)
-    * [addStaticDir(dirPath)](#exp_module_express-app-runner--addStaticDir)
+    * [addStaticDir(dirPath, [virtualPath])](#exp_module_express-app-runner--addStaticDir)
     * [run([options], [callback])](#exp_module_express-app-runner--run) ⇒ <code>http.Server</code>
 
 <a name="exp_module_express-app-runner--app"></a>
@@ -42,14 +42,15 @@ Routes HTTP GET requests to the specified 'urlPath', providing the specified "fi
 
 <a name="exp_module_express-app-runner--addStaticDir"></a>
 
-### addStaticDir(dirPath)
+### addStaticDir(dirPath, [virtualPath])
 Makes the content of 'dirPath' directory available for the app.
 
 **Kind**: Exported function
 
-| Param | Type | Description |
-| --- | --- | --- |
-| dirPath | <code>string</code> | The relative path to the directory. |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| dirPath | <code>string</code> |  | The relative path to the directory. |
+| [virtualPath] | <code>string</code> | <code>&quot;/&quot;</code> | A virtual path in which the content of the 'dirPath' will be provided. |
 
 <a name="exp_module_express-app-runner--run"></a>
 
