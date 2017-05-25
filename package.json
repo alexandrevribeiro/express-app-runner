@@ -8,7 +8,7 @@
     "lint-watch": "npm run lint -- --watch",
     "build": "babel src -d lib",
     "predemo": "npm run build",
-    "demo": "babel-node demo/index.js",
+    "demo": "cross-env NODE_ENV=development babel-node demo/index.js",
     "pretest": "npm run build",
     "test": "mocha --compilers js:babel-core/register --reporter progress test"
   },
@@ -36,6 +36,7 @@
     "babel-core": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "chai": "^3.5.0",
+    "cross-env": "^5.0.0",
     "eslint": "^3.19.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-watch": "^3.1.0",
