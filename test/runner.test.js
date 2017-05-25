@@ -52,7 +52,7 @@ describe('Demo app', () => {
     });
 });
 
-// Testing if there is the 'app-2.js' file being statically provided by the app
+// Testing if there is the 'app-2.js' file being statically provided by '/'
 describe('Demo app', () => {
     it('should provide a JavaScript file at "' + appUrl + '/app-1.js"', (done) => {
 
@@ -63,11 +63,11 @@ describe('Demo app', () => {
     });
 });
 
-// Testing if there is the 'app-2.js' file being statically provided by the app
+// Testing if there is the 'app-2.js' file being statically provided by '/public'
 describe('Demo app', () => {
     it('should provide a JavaScript file at "' + appUrl + '/app-2.js"', (done) => {
 
-        request(appUrl + '/app-2.js', (error, response, body) => {
+        request(appUrl + '/public/app-2.js', (error, response, body) => {
             expect(body).to.contains('console.log(\'"public-2/app.js" was loaded!\');');
             done();
         });

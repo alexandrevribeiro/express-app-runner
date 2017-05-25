@@ -8,11 +8,11 @@ export default function (options, callback) {
     // Routes the "/users" to the "users.html"
     runner.routeToFile('/users', './users.html');
 
-    // Making the content of 'public-1' folder available for the app
+    // Making the content of 'public-1' folder available for the app though the '/' path
     runner.addStaticDir('./public-1');
 
-    // Making the content of 'public-2' folder available for the app
-    runner.addStaticDir('./public-2');
+    // Making the content of 'public-2' folder available for the app though the '/public' path
+    runner.addStaticDir('./public-2', '/public');
 
     // Routing any other endpoint
     runner.app.get('/anything', (req, res) => {
