@@ -29,7 +29,7 @@
   "dependencies": {
     "express": "^4.15.2",
     "merge": "^1.2.0",
-    "open": "0.0.5"
+    "open": "6.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
